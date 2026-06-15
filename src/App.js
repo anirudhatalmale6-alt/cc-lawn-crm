@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import BottomNav from './components/BottomNav';
 import Dashboard from './pages/Dashboard';
@@ -20,7 +20,7 @@ import './index.css';
 function App() {
   return (
     <AppProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="app-container">
           <Routes>
             <Route path="/" element={<Dashboard />} />
@@ -41,7 +41,7 @@ function App() {
           </Routes>
           <BottomNav />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </AppProvider>
   );
 }
